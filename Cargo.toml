@@ -1,0 +1,9 @@
+[package]
+name = "rust-calc"
+version = "1.0.0"
+authors = ["Nico"]
+description = "A simple, incomplete, bloated calculator. Supports 2 floating point digits and the 4 basic operations"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
