@@ -1,7 +1,8 @@
-use std::io;
+use std::io::{self, Write};
 
 fn read(input: &mut String) {
-    io::stdin()
+	let _ = io::stdout().flush();    
+	io::stdin()
         .read_line(input)
         .expect("Failed to read from stdin");
 }
@@ -11,15 +12,15 @@ fn main() {
     let mut num2 = String::new();
     let mut operator = String::new();
 
-    println!("Enter the first digit:");
+    print!("Enter the first digit: ");
     read(&mut num1);
     let num1:f32 = num1.trim().parse().expect("Not a valid number");
 
-    println!("Enter the operator:");
+    print!("Enter the operator: ");
     read(&mut operator);
     let operator:char = operator.trim().chars().next().unwrap();
 
-    println!("Enter the second digit:");
+    print!("Enter the second digit: ");
     read(&mut num2);
     let num2:f32 = num2.trim().parse().expect("Not a valid number");
     
